@@ -1,6 +1,6 @@
 1. Create a new index called my_index.
 2. Define a custom analyzer that uses a lowercase tokenizer, an ASCII folding character filter, and a stop word token filter.
-3. Analyze the text "The quick brown fox jumped over the lazy dog" using the custom analyzer.
+3. Analyze the text "<b> The quick brown fox jumped over the lazy dog <b>" using the custom analyzer.
 4. Analyze the same text using the standard analyzer.
 
 
