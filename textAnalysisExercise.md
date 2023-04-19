@@ -8,9 +8,11 @@
 
 Custom analyzer
 ```
-PUT my_index/_settings
+PUT my_index
 {
-  "analysis": {
+  "settings":
+  {
+    "analysis": {
     "analyzer": {
       "my_analyzer": {
         "type": "custom",
@@ -29,6 +31,7 @@ PUT my_index/_settings
         "stopwords": "_english_"
       }
     }
+  }
   }
 }
 ```
