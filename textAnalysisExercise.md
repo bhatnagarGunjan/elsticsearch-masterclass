@@ -16,7 +16,7 @@ PUT my_index/_settings
         "type": "custom",
         "tokenizer": "lowercase",
         "char_filter": [
-          "asciifolding"
+          "html_strip"
         ],
         "filter": [
           "stop"
