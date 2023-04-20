@@ -41,7 +41,14 @@ bin/kibana
 
 ## Troubleshooting
 
-If you face the error "Port 5601 is already in use. Another instance of Kibana may be running!", kill the process running using the following command:
+1. Resetting the elastic user password.
+```
+cd /path/to/elasticsearch
+bin/elasticsearch-reset-password -u elastic
+```
+2. [Generate an enrollment token](https://www.elastic.co/guide/en/elasticsearch/reference/current/create-enrollment-token.html)
+3. [Troubleshoot password setup](https://www.elastic.co/guide/en/elasticsearch/reference/current/trb-security-setup.html)
+4. If you face the error "Port 5601 is already in use. Another instance of Kibana may be running!", kill the process running using the following command:
 ```
 kill -15 <PID>
 ```
@@ -52,15 +59,5 @@ You can get the PID by running the command:
 lsof -i tcp:<port>
 ```
 
-For troubleshooting purposes, you may also need to:
-
-1. Reset the elastic user password.
-
-```
-cd /path/to/elasticsearch
-bin/elasticsearch-reset-password -u elastic
-```
-2. [Generate an enrollment token](https://www.elastic.co/guide/en/elasticsearch/reference/current/create-enrollment-token.html)
-3. [Troubleshoot password setup](https://www.elastic.co/guide/en/elasticsearch/reference/current/trb-security-setup.html)
 
 
