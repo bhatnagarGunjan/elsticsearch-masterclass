@@ -291,6 +291,9 @@ GET recipes/_search
       },
       "negative_boost": 0.5
     }
+  },
+  "highlight": {
+    "fields": {"ingredients.name": {}}
   }
 }
 ```
