@@ -263,3 +263,34 @@ GET recipes/_search
   }
 }
 ```
+#Boosting queries
+#Find all recipes that contain garlic, but negatively boost recipes which are dry
+```
+GET recipes/_search
+{
+  "query": {
+    "boosting": {
+      "positive": {
+        "nested": {
+          "path": "ingredients",
+          "query": {
+            "match": {
+              "ingredients.name": "garlic"
+            }
+          }
+        }
+      },
+      "negative": {
+        "bool": {
+          "must": [
+            {"match_phrase": {
+              "steps": "heavy cream"
+            }}
+          ]
+        }
+      },
+      "negative_boost": 0.5
+    }
+  }
+}
+```
