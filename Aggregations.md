@@ -149,7 +149,7 @@ GET recipes/_search
   }
 }
 ```
-#Get the average prep time in the recipies with avg rating of 4 grouped by servings
+#Get the average prep time of the recipies which have got 4 or 5 star rating grouped by servings
 ```
 GET recipes/_search
 {
