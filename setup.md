@@ -41,7 +41,8 @@ bin/kibana
 
 ## Troubleshooting
 
-1. Resetting the elastic user password.
+1. when you will run bin/kibana, if u face prompt saying Node can't be opened due to security, Go to system preferences > privacy and security and click on allow anyway
+2. Resetting the elastic user password.
 ```
 cd /path/to/elasticsearch
 bin/elasticsearch-reset-password -u elastic
